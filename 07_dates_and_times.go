@@ -42,9 +42,17 @@ func main() {
         7 - Time zone
     */
 
-    longFormat := "Monday, January 2, 2006"
-    fmt.Println("Tomorrow is", tomorrow.Format(longFormat))
+    longDateFormat := "Monday, January 2, 2006"
+    fmt.Println("Tomorrow is", tomorrow.Format(longDateFormat))
 
-    shortFormat := "1/2/06"
-    fmt.Println("Tomorrow is", tomorrow.Format(shortFormat))
+    shortDateFormat := "1/2/06"
+    fmt.Println("Tomorrow is", tomorrow.Format(shortDateFormat))
+
+    // 12-hour am-pm clock format
+    dateTimeFormat := "2006-01-02 03:04:05 PM"
+    fmt.Println(tomorrow.Format(dateTimeFormat))
+
+    // 24-hour military time format
+    dateTimeFormat24 := "2006-01-02 15:04:05"
+    fmt.Println(tomorrow.Format(dateTimeFormat24))
 }
