@@ -55,4 +55,9 @@ func main() {
     // 24-hour military time format
     dateTimeFormat24 := "2006-01-02 15:04:05"
     fmt.Println(tomorrow.Format(dateTimeFormat24))
+
+    // location loading
+    loc, _ := time.LoadLocation("Pacific/Auckland")
+    aucklandTime := time.Now().In(loc)
+    fmt.Println(aucklandTime)
 }
