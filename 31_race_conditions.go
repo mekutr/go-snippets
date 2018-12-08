@@ -18,8 +18,8 @@ import (
 /*
     -Following example introduces a race condition between two goroutines
     -In this case, second goroutine will not respect the first goroutine and it will try to increment
-     the counter as soon as it takes its turn. While the expected output is 1000 after the first goroutine
-     is finished executing and 1100 after the second goroutine is finished executing, it will always create
+     the counter as soon as it takes its turn. While the expected output is 10000 after the first goroutine
+     is finished executing and 20000 after the second goroutine is finished executing, it will always create
      different results after the following is executed.
     -The reason is because there is no atomicity controller between two goroutines to make the second one
      wait until the first one finishes.
@@ -35,14 +35,14 @@ func main() {
 
     go func(){
         defer wg.Done()
-        incrementCounter(1000)
-        fmt.Printf("1st gorutine: %v\n", counter)
+        incrementCounter(10000)
+        fmt.Printf("1st goroutine: %v\n", counter)
     }()
 
     go func(){
         defer wg.Done()
-        incrementCounter(100)
-        fmt.Printf("2nd gorutine: %v\n", counter)
+        incrementCounter(10000)
+        fmt.Printf("2nd goroutine: %v\n", counter)
     }()
 
     wg.Wait()
