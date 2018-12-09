@@ -1,25 +1,25 @@
 package main
 
 import (
-    "fmt"
-    "io/ioutil"
+	"fmt"
+	"io/ioutil"
 )
 
 func main() {
 
-    fileName := "./temp/hello.txt"
+	fileName := "./temp/hello.txt"
 
-    // ReadFile return a byte array
-    content, err := ioutil.ReadFile(fileName)
-    checkError(err)
+	// ReadFile return a byte array
+	content, err := ioutil.ReadFile(fileName)
+	checkError(err)
 
-    result := string(content)
+	result := string(content)
 
-    fmt.Println("Read from file:", result)
+	fmt.Println("Read from file:", result)
 }
 
 func checkError(err error) {
-    if err != nil {
-        panic(err)
-    }
+	if err != nil {
+		panic(err)
+	}
 }

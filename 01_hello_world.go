@@ -9,13 +9,13 @@ import "fmt"
 // you can use the following format
 /*
 import (
-    "fmt"
-    "strings"
+	"fmt"
+	"strings"
 )
 */
 
 // The main package should have a function named main
 // It should be all lower case and does not have any arguments
 func main() {
-    fmt.Println("Hello from Go!")
+	fmt.Println("Hello from Go!")
 }
