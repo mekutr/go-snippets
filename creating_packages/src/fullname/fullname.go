@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"stringutil"
+
+	"github.com/mekutr/go-snippets/creating_packages/src/stringutil"
 )
 
 func main() {

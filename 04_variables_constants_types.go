@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // Go is a statically typed language
 // You have to set the type of each variable during the compilation process
 // and you can not change them at runtime
@@ -21,6 +23,14 @@ func main() {
 	const cInteger int = 1
 	// constants in Go with Implicit typing
 	const cString = "This is Go!!!"
+
+	fmt.Printf(`
+		First Integer: %d
+		Second Integer: %d
+		First String: %s
+		Third Integer: %d
+		Second String: %s`,
+		firstInteger, secondInteger, firstString, thirdInteger, secondString)
 
 	// fixed integer types
 	/*

@@ -13,7 +13,7 @@ import (
 
 func main() {
 
-	str1 := "An implictly typed string"
+	str1 := "An implicitly typed string"
 	fmt.Printf("str1: %v:%T\n", str1, str1)
 
 	fmt.Println(strings.ToUpper(str1))
@@ -22,7 +22,7 @@ func main() {
 
 	lValue := "hello"
 	uValue := "HELLO"
-	fmt.Println("Equal?", (lValue == uValue))                                   // == comparison operator compares the contents of the strings
+	fmt.Println("Equal?", lValue == uValue)                                     // == comparison operator compares the contents of the strings
 	fmt.Println("Equal Non-Case-Sensitive?", strings.EqualFold(lValue, uValue)) // EqualFold folds all the values to all uppercase
 
 	fmt.Println("Contains exp?", strings.Contains(str1, "exp"))
